@@ -23,7 +23,13 @@ $(function(){
 	  "hideMethod": "fadeOut"
 	};
 
-	$(".dnd-table").tableDnD({
+	$('.dnd-table').tableDnD({
 		dragHandle: ".drag"
+	});
+
+	$('table td.clear').click(function(){
+		var row = $(this).parent('tr');
+		row.find('input').val('');
+		row.find('select').val('');
 	});
 });

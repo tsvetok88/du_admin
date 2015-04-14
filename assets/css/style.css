@@ -7761,7 +7761,6 @@ You can remove this style if you want c:
 
 .uppercase {text-transform: uppercase;}
 .table-simple>tbody>tr>td {border-top: none;}
-.table-simple>tbody>tr>td:last-child {text-align: right;}
 .table-responsive {padding: 0 7px;}
 
 .dnd-table tr {
@@ -7775,9 +7774,9 @@ You can remove this style if you want c:
 	transition: all .2s ease-in-out;
 }
 
-td.drag, td.remove {vertical-align: middle !important;}
-td.drag {cursor: move; color: #528EAF;}
-td.remove {cursor: pointer; color: #E9573F;}
+td.drag, td.remove, td.clear {vertical-align: middle !important; width: 20px;}
+td.drag {cursor: move; color: #528EAF; text-align: center;}
+td.remove, td.clear {cursor: pointer; color: #E9573F; text-align: right;}
 
 .tDnD_whileDrag {background: #CFEEF4; transform: scale(1.005);}
 
