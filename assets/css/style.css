@@ -7761,14 +7761,32 @@ You can remove this style if you want c:
 
 .uppercase {text-transform: uppercase;}
 .table-simple>tbody>tr>td {border-top: none;}
-.table-simple>tbody>tr>td:first-child {padding-left:0;}
-.table-simple>tbody>tr>td:last-child {padding-right:0; text-align: right;}
+.table-simple>tbody>tr>td:last-child {text-align: right;}
+.table-responsive {padding: 0 7px;}
 
+.dnd-table tr {
+	-moz-transition: background 0.5s ease;
+	-o-transition: background 0.5s ease;
+	-webkit-transition: background 0.5s ease;
+	transition: background 0.5s ease;
+}
+.dnd-table tr {
+	height: 30px;
+	transition: all .2s ease-in-out;
+}
+
+td.drag, td.remove {vertical-align: middle !important;}
+td.drag {cursor: move; color: #528EAF;}
+td.remove {cursor: pointer; color: #E9573F;}
+
+.tDnD_whileDrag {background: #CFEEF4; transform: scale(1.005);}
+
+
+/**** FOOTER ****/
 .logo-footer {padding: 0; padding-left: 10px;}
 .logo-footer img {max-height: 50px;}
 .social-icon-footer {float: right;}
 .social-icon-footer i {line-height: 18px;}
 .copyright {float: left; color: #fff;}
 .footer-wrapper {overflow: hidden;}
-
 .navbar.footer-navbar {margin: 0;}

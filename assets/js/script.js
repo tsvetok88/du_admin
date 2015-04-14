@@ -21,7 +21,9 @@ $(function(){
 	  "hideEasing": "linear",
 	  "showMethod": "fadeIn",
 	  "hideMethod": "fadeOut"
-	}
+	};
 
-	
+	$(".dnd-table").tableDnD({
+		dragHandle: ".drag"
+	});
 });
