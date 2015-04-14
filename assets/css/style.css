@@ -70,7 +70,7 @@ CSS ELEMENTS
 
 
 @import url(http://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600,700);
-html {min-height: 100%; position: relative;}
+html {height: 100%; position: relative;}
 body{
 	background: #fff;
 	font-family: 'Lato', Calibri, Arial, sans-serif;
@@ -734,12 +734,15 @@ ul.sidebar-menu li.text-content.profile-summary{
 	padding: 0;
 	margin-left: 250px;
 	margin-top: 0;
+	position: relative;
 	z-index: 2;
 	background: #E8E9EE;
 	-webkit-transition:All 0.3s ease;
 	-moz-transition:All 0.3s ease;
 	-o-transition:All 0.3s ease;
-	height: 100%;
+	min-height: 100%;
+
+	padding-bottom: 60px;
 }
 .btn-collapse-sidebar-left{
 	position: absolute;
@@ -1442,6 +1445,10 @@ footer{
 	font-size: 13px;
 	padding: 15px;
 	line-height: 170%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
 }
 
 
