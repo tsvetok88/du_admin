@@ -23,6 +23,7 @@ $(function(){
 	  "hideMethod": "fadeOut"
 	};
 
+	/* Documentation -> http://isocra.com/2008/02/table-drag-and-drop-jquery-plugin/ */
 	$('.dnd-table').tableDnD({
 		dragHandle: ".drag"
 	});
