@@ -71,6 +71,7 @@ div.DTE div.DTE_Form_Buttons button {
   border-color: #8CC152;
   border-radius: 0px;
   float: right;
+  margin-left: 10px;
 }
 div.DTE div.DTE_Form_Buttons button:hover {
   background-color: #74AD3B;
@@ -171,6 +172,7 @@ div.DTE_Body {
 div.DTE_Body div.DTE_Body_Content {
   position: relative;
   overflow: auto;
+  min-height: 400px !important;
 }
 div.DTE_Body div.DTE_Body_Content div.DTE_Form_Info {
   padding: 1em 1em 0 1em;

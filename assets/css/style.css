@@ -7749,14 +7749,6 @@ You can remove this style if you want c:
 
 
 
-
-
-
-
-
-
-
-
 /************ CUSTOM ************/
 
 .uppercase {text-transform: uppercase;}
@@ -7777,8 +7769,15 @@ You can remove this style if you want c:
 td.drag, td.remove, td.clear {vertical-align: middle !important; width: 20px;}
 td.drag {cursor: move; color: #528EAF; text-align: center;}
 td.remove, td.clear {cursor: pointer; color: #E9573F; text-align: right;}
-
 .tDnD_whileDrag {background: #CFEEF4; transform: scale(1.005);}
+
+/**** DATATABLE ****/
+.dataTable .DTE_Label {display: none;}
+.dataTable .status-0 {color: #aaa;}
+.dataTable td span.label {display: inline-block; cursor: pointer;}
+.dataTable td .remove {color: #E9573F;}
+div.dataTables_paginate {float: left;}
+div.dataTables_length {float: right;}
 
 
 /**** FOOTER ****/
