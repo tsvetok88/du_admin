@@ -125,27 +125,27 @@
 			<div class="sidebar-left sidebar-nicescroller">
 				<ul class="sidebar-menu">
 					<li>
-						<a href="admin_control_homepage.html">
+						<a href="control_homepage.html">
 							<i class="fa fa-home icon-sidebar"></i>Управление главной
 						</a>
 					</li>
-					<li class="selected">
-						<a href="admin_control_charts.html">
+					<li>
+						<a href="control_charts.html">
 							<i class="fa fa-bar-chart-o icon-sidebar"></i>Управление графиками
 						</a>
 					</li>
 					<li>
-						<a href="admin_control_reports.html">
+						<a href="control_reports.html">
 							<i class="fa fa-gears icon-sidebar"></i>Управление отчетами
 						</a>
 					</li>
 					<li>
-						<a href="admin_control_invest.html">
+						<a href="control_invest.html">
 							<i class="fa fa-gears icon-sidebar"></i>Управление контентом Invest
 						</a>
 					</li>
-					<li>
-						<a href="admin_register.html">
+					<li class="selected">
+						<a href="register.html">
 							<i class="fa fa-gears icon-sidebar"></i>Регистрация аналитика
 						</a>
 					</li>
@@ -160,37 +160,73 @@
 				
 				<div class="container-fluid">
 					<!-- Begin page heading -->
-					<h1 class="page-heading">Управление графиками</h1>
+					<h1 class="page-heading">Регистрация аналитика</h1>
 					<!-- End page heading -->
 				
 					<!-- Begin breadcrumb -->
 					<ol class="breadcrumb default square rsaquo sm">
 						<li><a href="index.html"><i class="fa fa-home"></i></a></li>
-						<li class="active">Управление графиками</li>
+						<li class="active">Регистрация аналитика</li>
 					</ol>
 					<!-- End breadcrumb -->
 
 					<div class="the-box">
-							<h4 class="small-title"><a href="#" target="_blank">Инструкция по созданию графиков</a></h4>
 						<form role="form">
 							<div class="row">
-								<div class="col-sm-4">
+								<div class="col-sm-6">
 									<div class="form-group">
-										<label>Добавление таблицы данных</label>
-										<div class="input-group">
-											<input type="text" class="form-control" readonly>
-											<span class="input-group-btn">
-												<span class="btn btn-default btn-file">Обзор<input type="file" name=""></span>
-											</span>
-										</div>
+										<label>Название компании</label>
+										<input type="text" class="form-control">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label>Контактное лицо</label>
+										<input type="text" class="form-control">
 									</div>
 								</div>
 							</div>
-							<div class="form-group">
-								<label>Добавление XML</label>
-								<textarea class="form-control" rows="10"></textarea>
+							<div class="row">
+								<div class="col-sm-4">
+									<div class="form-group">
+										<label>E-mail</label>
+										<input type="email" class="form-control">
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<div class="form-group">
+										<label>Телефон</label>
+										<input type="text" class="form-control">
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<div class="form-group">
+										<label>Адрес</label>
+										<input type="text" class="form-control">
+									</div>
+								</div>
 							</div>
-							<button class="btn btn-success">Сохранить</button>
+							<div class="row">
+								<div class="col-sm-4">
+									<div class="form-group">
+										<label>Пароль</label>
+										<input type="password" class="form-control">
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<div class="form-group">
+										<label>Подтверждение пароля</label>
+										<input type="password" class="form-control">
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<div class="form-group">
+										<label>&nbsp;</label>
+										<button class="btn btn-default form-control">Сгенерировать пароль</button>
+									</div>
+								</div>
+							</div>
+							<button class="btn btn-success">Зарегистрировать</button>
 						</form>		
 						
 					</div><!-- /.the-box .default -->					

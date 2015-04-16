@@ -125,27 +125,27 @@
 			<div class="sidebar-left sidebar-nicescroller">
 				<ul class="sidebar-menu">
 					<li>
-						<a href="admin_control_homepage.html">
+						<a href="control_homepage.html">
 							<i class="fa fa-home icon-sidebar"></i>Управление главной
 						</a>
 					</li>
-					<li>
-						<a href="admin_control_charts.html">
+					<li class="selected">
+						<a href="control_charts.html">
 							<i class="fa fa-bar-chart-o icon-sidebar"></i>Управление графиками
 						</a>
 					</li>
 					<li>
-						<a href="admin_control_reports.html">
+						<a href="control_reports.html">
 							<i class="fa fa-gears icon-sidebar"></i>Управление отчетами
 						</a>
 					</li>
-					<li class="selected">
-						<a href="admin_control_invest.html">
+					<li>
+						<a href="control_invest.html">
 							<i class="fa fa-gears icon-sidebar"></i>Управление контентом Invest
 						</a>
 					</li>
 					<li>
-						<a href="admin_register.html">
+						<a href="register.html">
 							<i class="fa fa-gears icon-sidebar"></i>Регистрация аналитика
 						</a>
 					</li>
@@ -160,81 +160,23 @@
 				
 				<div class="container-fluid">
 					<!-- Begin page heading -->
-					<h1 class="page-heading">Управление контентом Invest</h1>
+					<h1 class="page-heading">Управление графиками</h1>
 					<!-- End page heading -->
 				
 					<!-- Begin breadcrumb -->
 					<ol class="breadcrumb default square rsaquo sm">
 						<li><a href="index.html"><i class="fa fa-home"></i></a></li>
-						<li class="active">Управление контентом Invest</li>
+						<li class="active">Управление графиками</li>
 					</ol>
 					<!-- End breadcrumb -->
 
 					<div class="the-box">
-						<h4 class="small-title uppercase">ТОП 5 проектов</h4>
-						<form action="">
-							<div class="row">
-								<div class="col-md-8">
-									<div class="form-group">
-										<select class="form-control" tabindex="2">
-											<option value="1">Lorem ipsum dolor sit amet</option>
-											<option value="2">Lorem ipsum dolor sit amet</option>
-											<option value="3">Lorem ipsum dolor sit amet</option>
-										</select>
-									</div>
-									<div class="form-group">
-										<select class="form-control" tabindex="2">
-											<option value="1">Lorem ipsum dolor sit amet</option>
-											<option value="2">Lorem ipsum dolor sit amet</option>
-											<option value="3">Lorem ipsum dolor sit amet</option>
-										</select>
-									</div>
-									<div class="form-group">
-										<select class="form-control" tabindex="2">
-											<option value="1">Lorem ipsum dolor sit amet</option>
-											<option value="2">Lorem ipsum dolor sit amet</option>
-											<option value="3">Lorem ipsum dolor sit amet</option>
-										</select>
-									</div>
-									<div class="form-group">
-										<select class="form-control" tabindex="2">
-											<option value="1">Lorem ipsum dolor sit amet</option>
-											<option value="2">Lorem ipsum dolor sit amet</option>
-											<option value="3">Lorem ipsum dolor sit amet</option>
-										</select>
-									</div>
-									<div class="form-group">
-										<select class="form-control" tabindex="2">
-											<option value="1">Lorem ipsum dolor sit amet</option>
-											<option value="2">Lorem ipsum dolor sit amet</option>
-											<option value="3">Lorem ipsum dolor sit amet</option>
-										</select>
-									</div>
-								</div>
-							</div>
-							<button class="btn btn-success">Сохранить</button>
-						</form>
-					</div>
-
-					<div class="the-box">
-						<h4 class="small-title uppercase">СТА</h4>
+							<h4 class="small-title"><a href="#" target="_blank">Инструкция по созданию графиков</a></h4>
 						<form role="form">
 							<div class="row">
-								<div class="col-sm-6">
+								<div class="col-sm-4">
 									<div class="form-group">
-										<label>Заголовок 1го слайда</label>
-										<input type="text" class="form-control">
-								  </div>
-								</div>
-								<div class="col-sm-6">
-									<div class="form-group">
-										<label>Заголовок 2го слайда</label>
-										<input type="text" class="form-control">
-								  </div>
-								</div>
-								<div class="col-sm-6">
-									<div class="form-group">
-										<label>Фоновое изображение</label>
+										<label>Добавление таблицы данных</label>
 										<div class="input-group">
 											<input type="text" class="form-control" readonly>
 											<span class="input-group-btn">
@@ -244,24 +186,14 @@
 									</div>
 								</div>
 							</div>
-							<div class="row">
-								<div class="col-sm-6">
-									<div class="form-group">
-										<label>Текст кнопки</label>
-										<input type="text" class="form-control">
-								  </div>
-								</div>
-								<div class="col-sm-6">
-									<div class="form-group">
-										<label>Ссылка перехода</label>
-										<input type="text" class="form-control">
-								  </div>
-								</div>
+							<div class="form-group">
+								<label>Добавление XML</label>
+								<textarea class="form-control" rows="10"></textarea>
 							</div>
 							<button class="btn btn-success">Сохранить</button>
-						</form>	
-					</div>
-					
+						</form>		
+						
+					</div><!-- /.the-box .default -->					
 				
 				</div><!-- /.container-fluid -->
 				
@@ -346,9 +278,6 @@
 		<script src="assets/plugins/slider/bootstrap-slider.js"></script>
 		
 		<script src="assets/plugins/toastr/toastr.js"></script>
-
-		<!-- table drag-and-drop-->
-		<script src="assets/plugins/tablednd/jquery.tablednd.0.8.min.js"></script>
 		
 		<!-- FULL CALENDAR JS -->
 		<script src="assets/plugins/fullcalendar/lib/jquery-ui.custom.min.js"></script>

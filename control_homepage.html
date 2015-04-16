@@ -124,28 +124,28 @@
 			<!-- BEGIN SIDEBAR LEFT -->
 			<div class="sidebar-left sidebar-nicescroller">
 				<ul class="sidebar-menu">
-					<li>
-						<a href="admin_control_homepage.html">
+					<li class="selected">
+						<a href="control_homepage.html">
 							<i class="fa fa-home icon-sidebar"></i>Управление главной
 						</a>
 					</li>
 					<li>
-						<a href="admin_control_charts.html">
+						<a href="control_charts.html">
 							<i class="fa fa-bar-chart-o icon-sidebar"></i>Управление графиками
 						</a>
 					</li>
 					<li>
-						<a href="admin_control_reports.html">
+						<a href="control_reports.html">
 							<i class="fa fa-gears icon-sidebar"></i>Управление отчетами
 						</a>
 					</li>
 					<li>
-						<a href="admin_control_invest.html">
+						<a href="control_invest.html">
 							<i class="fa fa-gears icon-sidebar"></i>Управление контентом Invest
 						</a>
 					</li>
-					<li class="selected">
-						<a href="admin_register.html">
+					<li>
+						<a href="register.html">
 							<i class="fa fa-gears icon-sidebar"></i>Регистрация аналитика
 						</a>
 					</li>
@@ -160,76 +160,178 @@
 				
 				<div class="container-fluid">
 					<!-- Begin page heading -->
-					<h1 class="page-heading">Регистрация аналитика</h1>
+					<h1 class="page-heading">Управление контентом главной страницы</h1>
 					<!-- End page heading -->
 				
 					<!-- Begin breadcrumb -->
 					<ol class="breadcrumb default square rsaquo sm">
 						<li><a href="index.html"><i class="fa fa-home"></i></a></li>
-						<li class="active">Регистрация аналитика</li>
+						<li class="active">Управление контентом главной страницы</li>
 					</ol>
 					<!-- End breadcrumb -->
 
 					<div class="the-box">
+						<h4 class="small-title uppercase">Слайдер</h4>
 						<form role="form">
 							<div class="row">
 								<div class="col-sm-6">
 									<div class="form-group">
-										<label>Название компании</label>
+										<label>Заголовок слайда</label>
 										<input type="text" class="form-control">
-									</div>
+								  </div>
 								</div>
 								<div class="col-sm-6">
 									<div class="form-group">
-										<label>Контактное лицо</label>
-										<input type="text" class="form-control">
+										<label>Фоновое изображение</label>
+										<div class="input-group">
+											<input type="text" class="form-control" readonly>
+											<span class="input-group-btn">
+												<span class="btn btn-default btn-file">Обзор<input type="file" name=""></span>
+											</span>
+										</div>
 									</div>
 								</div>
+							</div>
+							<div class="form-group">
+								<label>Основной текст</label>
+								<textarea class="form-control"></textarea>
 							</div>
 							<div class="row">
-								<div class="col-sm-4">
+								<div class="col-sm-6">
 									<div class="form-group">
-										<label>E-mail</label>
-										<input type="email" class="form-control">
-									</div>
-								</div>
-								<div class="col-sm-4">
-									<div class="form-group">
-										<label>Телефон</label>
+										<label>Текст кнопки</label>
 										<input type="text" class="form-control">
-									</div>
+								  </div>
 								</div>
-								<div class="col-sm-4">
+								<div class="col-sm-6">
 									<div class="form-group">
-										<label>Адрес</label>
+										<label>Ссылка перехода</label>
 										<input type="text" class="form-control">
-									</div>
+								  </div>
 								</div>
 							</div>
-							<div class="row">
-								<div class="col-sm-4">
-									<div class="form-group">
-										<label>Пароль</label>
-										<input type="password" class="form-control">
-									</div>
-								</div>
-								<div class="col-sm-4">
-									<div class="form-group">
-										<label>Подтверждение пароля</label>
-										<input type="password" class="form-control">
-									</div>
-								</div>
-								<div class="col-sm-4">
-									<div class="form-group">
-										<label>&nbsp;</label>
-										<button class="btn btn-default form-control">Сгенерировать пароль</button>
-									</div>
-								</div>
-							</div>
-							<button class="btn btn-success">Зарегистрировать</button>
+							<button class="btn btn-default">Добавить слайд</button>
+							<button class="btn btn-success">Сохранить</button>
 						</form>		
 						
-					</div><!-- /.the-box .default -->					
+					</div><!-- /.the-box .default -->
+
+					<div class="the-box">
+						<h4 class="small-title uppercase">ТОП индустрий Украины</h4>
+						<div class="row">
+							<div class="table-responsive">
+								<table class="table table-simple dnd-table">
+									<tr>
+										<td width="70%">
+											<select class="form-control" tabindex="2">
+												<option value="1">Lorem ipsum dolor sit amet</option>
+												<option value="2">Lorem ipsum dolor sit amet</option>
+												<option value="3">Lorem ipsum dolor sit amet</option>
+											</select>
+										</td>
+										<td><input type="text" class="form-control" placeholder="" value="+2.1%"></td>
+										<td class="drag"><i class="fa fa-bars"></i></td>
+										<td class="clear"><i class="fa fa-times"></i></td>
+									</tr>
+									<tr>
+										<td width="70%">
+											<select class="form-control" tabindex="2">
+												<option value="1">Lorem ipsum dolor sit amet</option>
+												<option value="2">Lorem ipsum dolor sit amet</option>
+												<option value="3">Lorem ipsum dolor sit amet</option>
+											</select>
+										</td>
+										<td><input type="text" class="form-control" placeholder="" value="+2.1%"></td>
+										<td class="drag"><i class="fa fa-bars"></i></td>
+										<td class="clear"><i class="fa fa-times"></i></td>
+									</tr>
+									<tr>
+										<td width="70%">
+											<select class="form-control" tabindex="2">
+												<option value="1">Lorem ipsum dolor sit amet</option>
+												<option value="2">Lorem ipsum dolor sit amet</option>
+												<option value="3">Lorem ipsum dolor sit amet</option>
+											</select>
+										</td>
+										<td><input type="text" class="form-control" placeholder="" value="+2.1%"></td>
+										<td class="drag"><i class="fa fa-bars"></i></td>
+										<td class="clear"><i class="fa fa-times"></i></td>
+									</tr>
+									<tr>
+										<td width="70%">
+											<select class="form-control" tabindex="2">
+												<option value="1">Lorem ipsum dolor sit amet</option>
+												<option value="2">Lorem ipsum dolor sit amet</option>
+												<option value="3">Lorem ipsum dolor sit amet</option>
+											</select>
+										</td>
+										<td><input type="text" class="form-control" placeholder="" value="+2.1%"></td>
+										<td class="drag"><i class="fa fa-bars"></i></td>
+										<td class="clear"><i class="fa fa-times"></i></td>
+									</tr>
+									<tr>
+										<td width="70%">
+											<select class="form-control" tabindex="2">
+												<option value="1">Lorem ipsum dolor sit amet</option>
+												<option value="2">Lorem ipsum dolor sit amet</option>
+												<option value="3">Lorem ipsum dolor sit amet</option>
+											</select>
+										</td>
+										<td><input type="text" class="form-control" placeholder="" value="+2.1%"></td>
+										<td class="drag"><i class="fa fa-bars"></i></td>
+										<td class="clear"><i class="fa fa-times"></i></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+
+					<div class="the-box">
+						<h4 class="small-title uppercase">СТА</h4>
+						<form role="form">
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label>Заголовок 1го слайда</label>
+										<input type="text" class="form-control">
+								  </div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label>Заголовок 2го слайда</label>
+										<input type="text" class="form-control">
+								  </div>
+								</div>
+								<div class="col-sm-6">
+										<div class="form-group">
+											<label>Фоновое изображение</label>
+											<div class="input-group">
+												<input type="text" class="form-control" readonly>
+												<span class="input-group-btn">
+													<span class="btn btn-default btn-file">Обзор<input type="file" name=""></span>
+												</span>
+											</div>
+										</div>
+									</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label>Текст кнопки</label>
+										<input type="text" class="form-control">
+								  </div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label>Ссылка перехода</label>
+										<input type="text" class="form-control">
+								  </div>
+								</div>
+							</div>
+							<button class="btn btn-success">Сохранить</button>
+						</form>	
+					</div>
+					
 				
 				</div><!-- /.container-fluid -->
 				
@@ -314,6 +416,9 @@
 		<script src="assets/plugins/slider/bootstrap-slider.js"></script>
 		
 		<script src="assets/plugins/toastr/toastr.js"></script>
+
+		<!-- table drag-and-drop-->
+		<script src="assets/plugins/tablednd/jquery.tablednd.0.8.min.js"></script>
 		
 		<!-- FULL CALENDAR JS -->
 		<script src="assets/plugins/fullcalendar/lib/jquery-ui.custom.min.js"></script>
