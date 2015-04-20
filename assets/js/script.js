@@ -51,19 +51,21 @@ $(function(){
 	var dataTablesDom = '<"table-top"f>t<"row"<"table-left col-md-6"p><"table-right col-md-6"l>><"clear">';
 
 	/************************************************/
-	/**************** СПИСОК ОТЧЕТОВ ****************/
+	/**************** ПРОСТОЙ СПИСОК ****************/
 	/************************************************/
 
+	/*** #datatable-dtbase - простой список с редактированием ***/
+
 	//Иницыализируем эдитор данных таблицы
-	var reports_editor = new $.fn.dataTable.Editor( {
+	var dtbase_editor = new $.fn.dataTable.Editor( {
     ajax: {
-      url: $('#datatable-reports').attr('data-update'),
+      url: $('#datatable-dtbase').attr('data-update'),
       type: 'POST'
     },
-    table: "#datatable-reports",
+    table: "#datatable-dtbase",
     fields: [
     	{label: "ID", name: "DT_RowId", type : "hidden"},
-    	{label: "Название отчета", name:  "name"},
+    	{label: "Name", name:  "name"},
     	{
     		name: "visible",
     		type:  "select",
@@ -76,19 +78,19 @@ $(function(){
 	});
 
 	// Активируем редактирование
-	$('#datatable-reports').on( 'click', 'tbody td.editable', function (e) {
+	$('#datatable-dtbase').on( 'click', 'tbody td.editable', function (e) {
 		e.stopImmediatePropagation();
 		var that = this.nodeName == 'SPAN' ? this.parentNode : this;
-		reports_editor.inline(that,{
+		dtbase_editor.inline(that,{
 			submitOnBlur: true
 		});
 	});
 
 	//Удаление рядка
-	$('#datatable-reports').on( 'click', 'tbody td .remove', function (e) {
+	$('#datatable-dtbase').on( 'click', 'tbody td .remove', function (e) {
 		e.stopImmediatePropagation();
-		var row = tableReports.row($(this.parentNode.parentNode));
-		deleteRow('Удалить отчет "'+row.data()['name']+'"', row.data()['id'], $('#datatable-reports').data('delete'), function(){
+		var row = tabledtbase.row($(this.parentNode.parentNode));
+		deleteRow('Удалить "'+row.data()['name']+'"', row.data()['id'], $('#datatable-dtbase').data('delete'), function(){
 			row.remove().draw()
 		});
 		//console.log(this.parentNode.parentNode);
@@ -96,8 +98,8 @@ $(function(){
 	});
 
 	//Иницыализируем таблицу с данными, подгружаем JSON
-	var tableReports = $('#datatable-reports').DataTable({
-		ajax : $('#datatable-reports').data('json'),
+	var tabledtbase = $('#datatable-dtbase').DataTable({
+		ajax : $('#datatable-dtbase').data('json'),
 		columns : [
 			{	
 				data : "name",

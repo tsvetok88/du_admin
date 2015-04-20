@@ -26,6 +26,7 @@
 		<link href="assets/plugins/summernote/summernote.min.css" rel="stylesheet">
 		<link href="assets/plugins/markdown/bootstrap-markdown.min.css" rel="stylesheet">
 		<link href="assets/plugins/datatable/css/bootstrap.datatable.min.css" rel="stylesheet">
+		<link href="assets/plugins/datatable/css/dataTables.editor.css" rel="stylesheet">
 		<link href="assets/plugins/morris-chart/morris.min.css" rel="stylesheet">
 		<link href="assets/plugins/c3-chart/c3.min.css" rel="stylesheet">
 		<link href="assets/plugins/slider/slider.min.css" rel="stylesheet">
@@ -134,7 +135,7 @@
 							<i class="fa fa-bar-chart-o icon-sidebar"></i>Управление графиками
 						</a>
 					</li>
-					<li class="selected">
+					<li>
 						<a href="control_reports.html">
 							<i class="fa fa-gears icon-sidebar"></i>Управление отчетами
 						</a>
@@ -159,7 +160,7 @@
 							<i class="fa fa-gears icon-sidebar"></i>Список отчетов
 						</a>
 					</li>
-					<li>
+					<li class="selected">
 						<a href="invests.html">
 							<i class="fa fa-gears icon-sidebar"></i>Каталог инвест проектов
 						</a>
@@ -175,63 +176,33 @@
 				
 				<div class="container-fluid">
 					<!-- Begin page heading -->
-					<h1 class="page-heading">Управление контентом Analyze</h1>
+					<h1 class="page-heading">Каталог инвест проектов</h1>
 					<!-- End page heading -->
 				
 					<!-- Begin breadcrumb -->
 					<ol class="breadcrumb default square rsaquo sm">
 						<li><a href="index.html"><i class="fa fa-home"></i></a></li>
-						<li class="active">Управление контентом Analyze</li>
+						<li class="active">Каталог инвест проектов</li>
 					</ol>
 					<!-- End breadcrumb -->
 
-
 					<div class="the-box">
-						<h4 class="small-title uppercase">ТОП 5 отчетов</h4>
-						<form action="">
-							<div class="row">
-								<div class="col-md-8">
-									<div class="form-group">
-										<select class="form-control" tabindex="2">
-											<option value="1">Lorem ipsum dolor sit amet</option>
-											<option value="2">Lorem ipsum dolor sit amet</option>
-											<option value="3">Lorem ipsum dolor sit amet</option>
-										</select>
-									</div>
-									<div class="form-group">
-										<select class="form-control" tabindex="2">
-											<option value="1">Lorem ipsum dolor sit amet</option>
-											<option value="2">Lorem ipsum dolor sit amet</option>
-											<option value="3">Lorem ipsum dolor sit amet</option>
-										</select>
-									</div>
-									<div class="form-group">
-										<select class="form-control" tabindex="2">
-											<option value="1">Lorem ipsum dolor sit amet</option>
-											<option value="2">Lorem ipsum dolor sit amet</option>
-											<option value="3">Lorem ipsum dolor sit amet</option>
-										</select>
-									</div>
-									<div class="form-group">
-										<select class="form-control" tabindex="2">
-											<option value="1">Lorem ipsum dolor sit amet</option>
-											<option value="2">Lorem ipsum dolor sit amet</option>
-											<option value="3">Lorem ipsum dolor sit amet</option>
-										</select>
-									</div>
-									<div class="form-group">
-										<select class="form-control" tabindex="2">
-											<option value="1">Lorem ipsum dolor sit amet</option>
-											<option value="2">Lorem ipsum dolor sit amet</option>
-											<option value="3">Lorem ipsum dolor sit amet</option>
-										</select>
-									</div>
-								</div>
-							</div>
-							<button class="btn btn-success">Сохранить</button>
-						</form>
-					</div>
-					
+						<div class="table-responsive">
+							<table class="table table-striped table-hover" id="datatable-dtbase" 
+								data-json="server/invests.json" 
+								data-update="server/editor_success.php" 
+								data-delete="server/delete_success.json"
+								>
+								<thead class="the-box dark full">
+									<tr>
+										<th>Название проекта</th>
+										<th width="60px">Статус</th>
+										<th width="60px"></th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+					</div><!-- /.the-box .default -->					
 				
 				</div><!-- /.container-fluid -->
 				
