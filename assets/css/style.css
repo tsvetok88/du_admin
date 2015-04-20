@@ -7750,8 +7750,11 @@ You can remove this style if you want c:
 
 
 /************ CUSTOM ************/
-
+.chosen-container {max-width: 100%;}
 .uppercase {text-transform: uppercase;}
+.copy-button { margin-bottom: 15px; }
+.copy-button a {display: inline-block; color: #528EAF; border-bottom: 1px dashed #528EAF; text-decoration: none;}
+
 .table-simple>tbody>tr>td {border-top: none;}
 .table-responsive {padding: 0 7px;}
 

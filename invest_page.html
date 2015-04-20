@@ -26,7 +26,6 @@
 		<link href="assets/plugins/summernote/summernote.min.css" rel="stylesheet">
 		<link href="assets/plugins/markdown/bootstrap-markdown.min.css" rel="stylesheet">
 		<link href="assets/plugins/datatable/css/bootstrap.datatable.min.css" rel="stylesheet">
-		<link href="assets/plugins/datatable/css/dataTables.editor.css" rel="stylesheet">
 		<link href="assets/plugins/morris-chart/morris.min.css" rel="stylesheet">
 		<link href="assets/plugins/c3-chart/c3.min.css" rel="stylesheet">
 		<link href="assets/plugins/slider/slider.min.css" rel="stylesheet">
@@ -146,16 +145,11 @@
 						</a>
 					</li>
 					<li>
-						<a href="register.html">
-							<i class="fa fa-gears icon-sidebar"></i>Регистрация аналитика
-						</a>
-					</li>
-					<li>
 						<a href="report_page.html">
 							<i class="fa fa-gears icon-sidebar"></i>Страница отчета
 						</a>
 					</li>
-					<li class="selected">
+					<li>
 						<a href="reports.html">
 							<i class="fa fa-gears icon-sidebar"></i>Список отчетов
 						</a>
@@ -165,7 +159,7 @@
 							<i class="fa fa-gears icon-sidebar"></i>Каталог инвест проектов
 						</a>
 					</li>
-					<li>
+					<li class="selected">
 						<a href="invest_page.html">
 							<i class="fa fa-gears icon-sidebar"></i>Инвестиционный проект
 						</a>
@@ -181,32 +175,98 @@
 				
 				<div class="container-fluid">
 					<!-- Begin page heading -->
-					<h1 class="page-heading">Страница отчета</h1>
+					<h1 class="page-heading">Название инвестиционного проекта</h1>
 					<!-- End page heading -->
 				
 					<!-- Begin breadcrumb -->
 					<ol class="breadcrumb default square rsaquo sm">
 						<li><a href="index.html"><i class="fa fa-home"></i></a></li>
-						<li class="active">Страница отчета</li>
+						<li class="active">Название инвестиционного проекта</li>
 					</ol>
 					<!-- End breadcrumb -->
 
 					<div class="the-box">
-						<div class="table-responsive">
-							<table class="table table-striped table-hover" id="datatable-dtbase" 
-								data-json="server/reports.json" 
-								data-update="server/editor_success.php" 
-								data-delete="server/delete_success.json"
-								>
-								<thead class="the-box dark full">
-									<tr>
-										<th>Название отчета</th>
-										<th width="60px">Статус</th>
-										<th width="60px"></th>
-									</tr>
-								</thead>
-							</table>
-						</div>
+						<form role="form">
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label>Заголовок слайдера</label>
+										<input type="text" class="form-control">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label>Фоновое изображение</label>
+										<div class="input-group">
+											<input type="text" class="form-control" readonly>
+											<span class="input-group-btn">
+												<span class="btn btn-default btn-file">Обзор<input type="file" name=""></span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label>Краткое описание</label>
+								<textarea class="form-control" rows="5"></textarea>
+							</div>
+							<div class="copy-rows">
+								<div class="row source-to-copy">
+									<div class="col-sm-4">
+										<div class="form-group">
+											<label>Показатель <span class="counter">1</span></label>
+											<input name="mark_text[]" type="text" class="form-control">
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="form-group">
+											<label>Иконка показателя</label>
+											<div class="input-group">
+												<input name="mark_icon[]" type="text" class="form-control" readonly>
+												<span class="input-group-btn">
+													<span class="btn btn-default btn-file">Обзор<input type="file" name=""></span>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="copy-button"><a href="#">Добавить показатель</a></div>
+							</div>
+							<div class="form-group">
+								<label>Описание проекта</label>
+								<textarea class="form-control" rows="10"></textarea>
+							</div>
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label>Степень готовности проектаt</label>
+										<select class="form-control">
+											<option value="0">Lorem</option>
+											<option value="1">Ipsum</option>
+											<option value="2">Dolor</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label>Chosen Multiple Select</label>
+								<select data-placeholder="Выберите из списка..." class="form-control chosen-select" multiple>
+									<option value="0" selected>Lorem</option>
+									<option value="1" selected>Ipsum</option>
+									<option value="2">Dolor</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" value="" class="i-grey-flat"> Опубликовать отчет
+									</label>
+								</div>
+							</div>
+							<button class="btn btn-success">Сохранить</button>
+							<button class="btn btn-default">Удалить отчет</button>
+						</form>		
+						
 					</div><!-- /.the-box .default -->					
 				
 				</div><!-- /.container-fluid -->

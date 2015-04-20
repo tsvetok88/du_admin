@@ -137,6 +137,16 @@ $(function(){
 		row.find('input').val('');
 		row.find('select').val('');
 	});
+
+	$('.copy-rows .copy-button a').click(function(e){
+		e.preventDefault();
+		var length = $('.copy-rows .source-to-copy').length;
+		var row = $('.copy-rows .source-to-copy:last').clone();
+		row.find('.counter').text(length+1);
+		row.insertAfter('.copy-rows .source-to-copy:last');
+		//console.log($('.copy-rows .source-to-copy'));
+	})
+
 });
 
 
