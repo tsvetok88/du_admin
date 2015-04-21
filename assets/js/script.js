@@ -105,7 +105,7 @@ $(function(){
 				data : "name",
 				class : "link",
 				render : function (data, type, row) {
-					return '<a href="/'+row.id+'" class="status-'+row.visible+'">'+row.name+'</a>'
+					return '<a href="' + $('#datatable-dtbase').data('edit').replace('0', row.id) + '" class="status-'+row.visible+'">'+row.name+'</a>'
 				}
 			},
 			{
@@ -128,7 +128,18 @@ $(function(){
 	/* Documentation -> http://isocra.com/2008/02/table-drag-and-drop-jquery-plugin/ */
 	if($('.dnd-table').length > 0){
 		$('.dnd-table').tableDnD({
-			dragHandle: ".drag"
+			dragHandle: ".drag",
+            		onDragStart: function(table, row){
+                		// console.log('drag start');
+            		},
+            		onDrop: function(table, row) {
+                		// for fire this event you must add ID to <tr>
+                		var pos = 1;
+                		$('tr', table).each(function(){
+                    			$('input[name^="position"]', this).val(pos);
+                    			pos++;
+                		});
+            		}
 		});
 	}
 
